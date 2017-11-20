@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin</title>
+    <title>Estadística</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- Favicon -->
@@ -20,8 +20,8 @@
     <!-- Custom styles for this theme -->
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/estilos.css">
-    <!-- DataTables-->
-    <link rel="stylesheet" href="assets/plugins/dataTables/css/dataTables.css">
+    <!-- Morris  -->
+    <link rel="stylesheet" href="assets/plugins/morris/css/morris.css">
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -96,64 +96,40 @@
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a>
                         </li>
-                        <li class="active">Usuarios del sistema</li>
+                        <li class="active">Estadística del sistema</li>
                     </ul>
                     <!--breadcrumbs end -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Data Tables</h3>
-                            <div class="actions pull-right">
-                                <i class="fa fa-chevron-down"></i>
-                                <i class="fa fa-times"></i>
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Navegadores que nuestros clientes utilizan</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div id="donut-example"></div>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Registro nuevos usuarios para el 2016</h3>
+                                    <div class="actions pull-right">
+                                        <i class="fa fa-chevron-down"></i>
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="sales-chart" style="height: 348px;"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="panel-body">
-                            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                                <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Correo</th>
-                                    <th>Cantidad de listas</th>
-                                    <th>Permisos</th>
-                                </tr>
-                                </thead>
 
-                                <tbody>
-                                <tr>
-                                    <td>Pedro Gomez</td>
-                                    <td>pedrogomez@gmail.com</td>
-                                    <td>10</td>
-                                    <td><a href=""><strong>Activar</strong></a>  <br/> <a href=""><strong>Hacer admin</strong></a></td>
-                                <tr>
-                                    <td>Maria Fajardo</td>
-                                    <td>mariafajardo@gmail.com</td>
-                                    <td>3</td>
-                                    <td><a href=""><strong>Desactivar</strong></a>  <br/> <a href=""><strong>Hacer admin</strong></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Irene Garcia</td>
-                                    <td>irenegacia103@gmail.com</td>
-                                    <td>3</td>
-                                    <td><a href=""><strong>Desactivar</strong></a>  <br/> <a href=""><strong>Quitar admin</strong></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Ivan Barreto</td>
-                                    <td>ivanbarreto@gmail.com</td>
-                                    <td>2</td>
-                                    <td><a href=""><strong>Desactivar</strong></a>  <br/> <a href=""><strong>Hacer admin</strong></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Julio Zerpa</td>
-                                    <td>juliozerpa@gmail.com</td>
-                                    <td>5</td>
-                                    <td><a href=""><strong>Activar</strong></a> <br/> <a href=""><strong>Hacer admin</strong></a></td>
-                                </tr>
-
-                                </tbody>
-                            </table>
-
-                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -166,13 +142,35 @@
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/waypoints/waypoints.min.js"></script>
 <script src="assets/js/application.js"></script>
-<script src="assets/plugins/dataTables/js/jquery.dataTables.js"></script>
-<script src="assets/plugins/dataTables/js/dataTables.bootstrap.js"></script>
+<!--Page Leve JS -->
+<script src="assets/plugins/chartjs/Chart.min.js"></script>
+<script src="assets/plugins/chartjs/chartjs-demo.js"></script>
+<script src="assets/plugins/morris/js/morris.min.js"></script>
+<script src="assets/plugins/morris/js/raphael.2.1.0.min.js"></script>
+
+<script src="assets/plugins/flot/js/jquery.flot.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.resize.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.canvas.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.image.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.categories.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.crosshair.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.errorbars.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.fillbetween.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.navigate.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.pie.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.selection.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.stack.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.symbol.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.threshold.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.colorhelpers.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.time.min.js"></script>
+<script src="assets/plugins/flot/js/jquery.flot.example.js"></script>
 <script>
     $(document).ready(function() {
-        $('#example').dataTable();
+        app.morrisPie();
     });
 </script>
+
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

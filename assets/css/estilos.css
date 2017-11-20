@@ -53,3 +53,7 @@
 #new-item {
     margin-top: 24px;
 }
+
+#new-list {
+    width: 96%;
+}

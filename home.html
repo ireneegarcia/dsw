@@ -78,7 +78,7 @@
                     <a href="admin-users.html"><i class="fa fa-cogs"></i><span>Usuarios del sistema</span></a>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-arrow-left"></i><span>Inicio</span></a>
+                    <a href="system-statistics.html"><i class="fa fa-bar-chart-o"></i><span>Estadística del sistema</span></a>
                 </li>
 
 
@@ -109,90 +109,101 @@
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Nuevo item...">
-                                            <section>
-                                                <ul>
-                                                    <li class="item">
-                                                        Ingredientes del pan de jamón
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-default" style="width: 10%">10%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Materiales de torta
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-default" style="width: 20%">20%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Ropa para los niños
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-success" style="width: 30%">30%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Pintura de caucho
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-info" style="width: 60%">60%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Cortinas de baño
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-success" style="width: 40%">40%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Jarras de agua
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-danger" style="width: 100%">100%</div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </section>
-                                        </div>
-                                        <div class="form-group">
-                                            <button class="btn btn-primary pull-right">Añadir</button>
-                                            <div></div>
-                                        </div>
+                                <input type="text" class="form-control" placeholder="Nuevo item...">
+                                <hr>
+                                <div class="dd" id="nestable1">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="1">
+                                            <div class="dd-handle">
+                                                Ingredientes del pan de jamón
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-default" style="width: 10%">10%</div>
+                                                </div>
+
+                                            </div>
+                                        </li>
+                                        <li class="dd-item" data-id="2">
+                                            <div class="dd-handle">
+                                                Materiales de torta
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-default" style="width: 20%">20%</div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="dd-item" data-id="3">
+                                            <div class="dd-handle">
+                                                Ropa para los niños
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-success" style="width: 30%">30%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dd-item" data-id="4">
+                                            <div class="dd-handle">
+                                                Pintura de caucho
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-info" style="width: 60%">60%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dd-item" data-id="5">
+                                            <div class="dd-handle">
+
+                                                Cortinas de baño
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-success" style="width: 40%">40%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dd-item" data-id="6">
+                                            <div class="dd-handle">
+                                                Jarras de agua
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 100%">100%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <hr>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary pull-right">Añadir</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -203,57 +214,60 @@
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Nuevo item...">
-                                            <section>
-                                                <ul>
-                                                    <li class="item">
-                                                        Creación de mapa de calor
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-default" style="width: 15%">15%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Evaluar cercania en el mapa
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-info" style="width: 60%">60%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Camino mas cercano
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-danger" style="width: 100%">100%</div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </section>
-                                        </div>
-                                        <div class="form-group">
-                                            <button class="btn btn-primary pull-right">Añadir</button>
-                                            <div></div>
-                                        </div>
+                                <input type="text" class="form-control" placeholder="Nuevo item...">
+                                <hr>
+                                <div class="dd" id="nestable3">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="7">
+                                            <div class="dd-handle">
+                                                Creación de mapa de calor
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-default" style="width: 15%">15%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dd-item" data-id="8">
+                                            <div class="dd-handle">
+                                                Evaluar cercania en el mapa
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-info" style="width: 60%">60%</div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="dd-item" data-id="9">
+                                            <div class="dd-handle">
+                                                Camino mas cercano
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 100%">100%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <hr>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary pull-right">Añadir</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -264,61 +278,61 @@
                                 </div>
                             </div>
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input id="new-todo" type="text" class="form-control" placeholder="Nuevo item...">
-                                            <section id="main">
-                                                <ul>
-                                                    <li class="item">
-                                                        Pagar el agua
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-default" style="width: 15%">15%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Cortarse el cabello
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-danger" style="width: 100%">100%</div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="item">
-                                                        Pintar la casa
-                                                        <div class="pull-right">
-                                                            <i class="fa fa-minus"></i>
-                                                            <i class="fa fa-plus"></i>
-                                                            <i class="fa fa-times"></i>
-                                                        </div>
-                                                        <div class="progress progress-striped">
-                                                            <div class="progress-bar progress-bar-success" style="width: 50%">50%</div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </section>
-                                        </div>
-                                        <div class="form-group">
-                                            <button id="todo-enter" class="btn btn-primary pull-right">Añadir</button>
-                                            <div id="todo-count"></div>
-                                        </div>
+                                <input type="text" class="form-control" placeholder="Nuevo item...">
+                                <hr>
+                                <div class="dd" id="nestable2">
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="10">
+                                            <div class="dd-handle">
+                                                Pintar la casa
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-success" style="width: 50%">50%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="dd-item" data-id="11">
+                                            <div class="dd-handle">
+                                                Cortarse el cabello
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 100%">100%</div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li class="dd-item" data-id="12">
+                                            <div class="dd-handle">
+                                                Pagar el agua
+                                                <div class="pull-right">
+                                                    <i class="fa fa-minus"></i>
+                                                    <i class="fa fa-plus"></i>
+                                                    <i class="fa fa-times"></i>
+                                                </div>
+                                                <div class="progress progress-striped">
+                                                    <div class="progress-bar progress-bar-default" style="width: 15%">15%</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    <hr>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary pull-right">Añadir</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </section>
     </section>
     <!--main content end-->
@@ -328,8 +342,60 @@
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/waypoints/waypoints.min.js"></script>
 <script src="assets/js/application.js"></script>
-<!-- ToDo List  -->
+<!--Page Leve JS -->
 <script src="assets/plugins/todo/js/todos.js"></script>
+<script src="assets/plugins/sortNestable/js/jquery.nestable.js"></script>
+<script>
+    $(document).ready(function() {
+
+        var updateOutput = function(e) {
+            var list = e.length ? e : $(e.target),
+                output = list.data('output');
+            if (window.JSON) {
+                output.val(window.JSON.stringify(list.nestable('serialize'))); //, null, 2));
+            } else {
+                output.val('JSON browser support required for this demo.');
+            }
+        };
+
+        // activate Nestable for list 1
+        $('#nestable1').nestable({
+            group: 1
+        })
+            .on('change', updateOutput);
+
+        // activate Nestable for list 2
+        $('#nestable2').nestable({
+            group: 1
+        })
+            .on('change', updateOutput);
+
+        // activate Nestable for list 2
+        $('#nestable3').nestable({
+            group: 1
+        })
+            .on('change', updateOutput);
+
+        // output initial serialised data
+        updateOutput($('#nestable1').data('output', $('#nestable1-output')));
+        updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+        updateOutput($('#nestable3').data('output', $('#nestable3-output')));
+
+        $('#nestable-menu').on('click', function(e) {
+            var target = $(e.target),
+                action = target.data('action');
+            if (action === 'expand-all') {
+                $('.dd').nestable('expandAll');
+            }
+            if (action === 'collapse-all') {
+                $('.dd').nestable('collapseAll');
+            }
+        });
+
+
+
+    });
+</script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
