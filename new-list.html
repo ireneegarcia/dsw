@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nueva lista</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Fonts from Font Awsome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- CSS Animate -->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Custom styles for this theme -->
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- Feature detection -->
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section id="container">
+    <header id="header">
+        <!--logo start-->
+        <div class="brand">
+            <a href="index.html" class="logo"><span>Admin</span>Tarea</a>
+        </div>
+        <!--logo end-->
+        <div class="user-nav">
+            <ul>
+
+                <li class="profile-photo">
+                    <img src="assets/img/admin.JPG" alt="" class="img-circle">
+                </li>
+                <li class="dropdown settings">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Irene Garcia <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInDown">
+                        <li>
+                            <a href="my-profile.html"><i class="fa fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+    <!--sidebar start-->
+    <aside class="sidebar">
+        <div id="leftside-navigation" class="nano">
+            <ul class="nano-content">
+                <li>
+                    <a href="home.html"><i class="fa fa-list"></i><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="new-list.html"><i class="fa fa-plus"></i><span>Nueva lista</span></a>
+                </li>
+                <li>
+                    <a href="admin-users.html"><i class="fa fa-cogs"></i><span>Usuarios del sistema</span></a>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-arrow-left"></i><span>Inicio</span></a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section class="main-content-wrapper">
+        <section id="main-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--breadcrumbs start -->
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li class="active">Nueva lista</li>
+                    </ul>
+                    <!--breadcrumbs end -->
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2 class="text-center">Nueva lista</h2>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <div class="form-group col-md-12">
+                                                    <label>Nombre de la lista</label>
+                                                    <input type="text" class="form-control" placeholder="Nombre de la lista">
+                                                </div>
+                                                <div class="form-group col-md-11">
+                                                    <label>Items de la lista</label>
+                                                    <input type="text" class="form-control" placeholder="Nuevo item...">
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <button type="button" id="new-item" class="btn btn-default pull-right" data-toggle="tooltip" data-placement="top" title="Nuevo item">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <br/>
+                                                <hr>
+                                                <a href="home.html" class="btn btn-primary btn-block">Crear lista</a>
+                                            </div>
+                                            <hr>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </section>
+    <!--main content end-->
+</section>
+<!--Global JS-->
+<script src="assets/js/jquery-1.10.2.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/waypoints/waypoints.min.js"></script>
+<script src="assets/js/application.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46627904-1', 'authenticgoods.co');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
