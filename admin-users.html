@@ -123,30 +123,90 @@
                                     <td>Pedro Gomez</td>
                                     <td>pedrogomez@gmail.com</td>
                                     <td>10</td>
-                                    <td><a href=""><strong>Activar</strong></a>  <br/> <a href=""><strong>Hacer admin</strong></a></td>
+                                    <td>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea activar este usuario?', 'Activar')">
+                                            <strong>
+                                                Activar
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea hacer admin a este usuario?', 'Hacer admin')">
+                                            <strong>
+                                                Hacer admin
+                                            </strong>
+                                        </a>
+                                    </td>
                                 <tr>
                                     <td>Maria Fajardo</td>
                                     <td>mariafajardo@gmail.com</td>
                                     <td>3</td>
-                                    <td><a href=""><strong>Desactivar</strong></a>  <br/> <a href=""><strong>Hacer admin</strong></a></td>
+                                    <td>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea desactivar este usuario?', 'Desactivar')">
+                                            <strong>
+                                                Desactivar
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea hacer admin a este usuario?', 'Hacer admin')">
+                                            <strong>
+                                                Hacer admin
+                                            </strong>
+                                        </a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Irene Garcia</td>
                                     <td>irenegacia103@gmail.com</td>
                                     <td>3</td>
-                                    <td><a href=""><strong>Desactivar</strong></a>  <br/> <a href=""><strong>Quitar admin</strong></a></td>
+                                    <td>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea desactivar este usuario?', 'Desactivar')">
+                                            <strong>
+                                                Desactivar
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea quitar la función de admin a este usuario?', 'Quitar admin')">
+                                            <strong>
+                                                Quitar admin
+                                            </strong>
+                                        </a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Ivan Barreto</td>
                                     <td>ivanbarreto@gmail.com</td>
                                     <td>2</td>
-                                    <td><a href=""><strong>Desactivar</strong></a>  <br/> <a href=""><strong>Hacer admin</strong></a></td>
+                                    <td>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea desactivar este usuario?', 'Desactivar')">
+                                            <strong>
+                                                Desactivar
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea hacer admin a este usuario?', 'Hacer admin')">
+                                            <strong>
+                                                Hacer admin
+                                            </strong>
+                                        </a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Julio Zerpa</td>
                                     <td>juliozerpa@gmail.com</td>
                                     <td>5</td>
-                                    <td><a href=""><strong>Activar</strong></a> <br/> <a href=""><strong>Hacer admin</strong></a></td>
+                                    <td>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea activar este usuario?', 'Activar')">
+                                            <strong>
+                                                Activar
+                                            </strong>
+                                        </a>
+                                        <br/>
+                                        <a href="#" onclick="setPolices('¿Esta seguro de que desea hacer admin a este usuario?', 'Hacer admin')">
+                                            <strong>
+                                                Hacer admin
+                                            </strong>
+                                        </a>
+                                    </td>
                                 </tr>
 
                                 </tbody>
@@ -168,10 +228,32 @@
 <script src="assets/js/application.js"></script>
 <script src="assets/plugins/dataTables/js/jquery.dataTables.js"></script>
 <script src="assets/plugins/dataTables/js/dataTables.bootstrap.js"></script>
+<script src="assets/js/sweetalert.js"></script>
 <script>
     $(document).ready(function() {
         $('#example').dataTable();
     });
+
+
+    function setPolices(text, action) {
+        swal({
+            title: text,
+            text: "Esta acción podrá ser revertida posteriormente",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#1abc9c',
+            confirmButtonText: action
+        }).then(function (result) {
+            if (result.value) {
+                swal(
+                    'Hecho!',
+                    'Los permisos del usuario han sido actualizado exitosamente',
+                    'success'
+                )
+            }
+        })
+    }
+
 </script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

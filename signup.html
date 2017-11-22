@@ -73,9 +73,9 @@
                                 <label>Ingrese nuevamente su clave</label>
                                 <input type="password" class="form-control" placeholder="*******">
                             </div>
-
-                            <a href="index.html" class="btn btn-primary btn-block">Crear cuenta</a>
+                            <a href="#" class="btn btn-primary btn-block" onclick="create()">Crear cuenta</a>
                         </form>
+
                         <a href="index.html">Volver atrás</a>
                     </div>
                 </div>
@@ -99,6 +99,18 @@
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/waypoints/waypoints.min.js"></script>
 <script src="assets/js/application.js"></script>
+<script src="assets/js/sweetalert.js"></script>
+<script>
+    function create() {
+        swal({
+            position: 'center',
+            type: 'success',
+            title: 'Su cuenta ha sido creada exitosamente',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    }
+</script>
 </body>
 
 </html>

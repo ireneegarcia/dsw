@@ -97,7 +97,7 @@
                                             <div class="form-group">
                                                 <div class="col-md-12">
                                                     <input type="password" class="form-control" id="password" placeholder="*******">
-                                                    <a href="forgot-password.html" class="help-block">¿Olvidó su contraseña?</a>
+                                                    <a href="#" onclick="forgotpassword()" class="help-block">¿Olvidó su contraseña?</a>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -133,6 +133,28 @@
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/waypoints/waypoints.min.js"></script>
 <script src="assets/js/application.js"></script>
+<script src="assets/js/sweetalert.js"></script>
+<script>
+    function forgotpassword() {
+        swal({
+            title: 'Introduzca su correo electronico',
+            input: 'email',
+            showCancelButton: true,
+            confirmButtonText: 'Enviar',
+            confirmButtonColor: '#1abc9c',
+            showLoaderOnConfirm: true,
+            allowOutsideClick: false
+        }).then(function (result) {
+            if (result.value) {
+                swal({
+                    type: 'success',
+                    title: 'Contraseña enviada',
+                    html: 'A su correo: ' + result.value
+                })
+            }
+        })
+    }
+</script>
 </body>
 
 </html>

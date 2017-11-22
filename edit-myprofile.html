@@ -75,7 +75,7 @@
                                         <label for="exampleInputFile">Foto de perfil</label>
                                         <input type="file" id="exampleInputFile">
                                     </div>
-                                    <a href="my-profile.html" class="btn btn-primary  btn-block">Actualizar mi perfil</a>
+                                    <a href="#" class="btn btn-primary  btn-block" onclick="update()">Actualizar mi perfil</a>
                                     <a href="my-profile.html" class="btn btn-default btn-block">Volver</a>
                                 </form>
                             </div>
@@ -103,6 +103,18 @@
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/waypoints/waypoints.min.js"></script>
 <script src="assets/js/application.js"></script>
+<script src="assets/js/sweetalert.js"></script>
+<script>
+    function update() {
+        swal({
+            position: 'center',
+            type: 'success',
+            title: 'Su perfil ha sido actualizado exitosamente',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    }
+</script>
 </body>
 
 </html>
