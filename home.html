@@ -105,7 +105,7 @@
                                 <h3 class="panel-title">Lista de compras</h3>
                                 <div class="actions pull-right">
                                     <i title="Minimizar" class="fa fa-chevron-down"></i>
-                                    <i title="Editar" class="fa fa-pencil"></i>
+                                    <i title="Editar" onclick="edit('Lista de compras')" class="fa fa-pencil"></i>
                                     <i title="Eliminar" class="fa fa-times"></i>
                                 </div>
                             </div>
@@ -217,7 +217,7 @@
                                 <h3 class="panel-title">Funciones a desarrollar</h3>
                                 <div class="actions pull-right">
                                     <i title="Minimizar" class="fa fa-chevron-down"></i>
-                                    <i title="Editar" class="fa fa-pencil"></i>
+                                    <i title="Editar" onclick="edit('Funciones a desarrollar')" class="fa fa-pencil"></i>
                                     <i title="Eliminar" class="fa fa-times"></i>
                                 </div>
                             </div>
@@ -285,7 +285,7 @@
                                 <h3 class="panel-title">Diligencias</h3>
                                 <div class="actions pull-right">
                                     <i title="Minimizar" class="fa fa-chevron-down"></i>
-                                    <i title="Editar" class="fa fa-pencil"></i>
+                                    <i title="Editar" onclick="edit('Diligencias')" class="fa fa-pencil"></i>
                                     <i title="Eliminar" class="fa fa-times"></i>
                                 </div>
                             </div>
@@ -417,6 +417,24 @@
             showConfirmButton: false,
             timer: 3000
         });
+    }
+
+    function edit(text) {
+        swal({
+            title: 'Editar nombre de la lista "'+text+'"',
+            input: 'text',
+            inputPlaceholder: 'escriba aquí el nuevo nombre',
+            confirmButtonColor: '#1abc9c',
+            showCancelButton: true
+        }).then(function (result) {
+            if (result.value) {
+                swal({
+                    type: 'success',
+                    title: 'Nombre de la lista actualizado exitosamente',
+                    html: 'Nuevo nombre: ' + result.value
+                })
+            }
+        })
     }
 </script>
 <script>
